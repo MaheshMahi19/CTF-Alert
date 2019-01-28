@@ -41,7 +41,7 @@ async def ctf(ctx,count:int):
 @client.command(pass_context=True)
 async def addchall(ctx,ctfname,points:int,*,chall:str):
     if ctfname in x:
-        y = x[ctfname]["chall"]
+        y = x[ctfname]["challs"]
         if chall in y:
             await client.say("Challenge is Already inserted")
             return
