@@ -77,7 +77,7 @@ async def total(ctx):
 @client.command(pass_context=True)
 async def remove(ctx,ctfname:str):
     if ctfname in x:
-        def x[ctfname]
+        del x[ctfname]
         await client.say("CTF has been deleted successfully")
     else:
         await client.say("No CTF is there")
