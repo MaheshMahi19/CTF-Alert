@@ -75,7 +75,7 @@ async def total(ctx):
     await client.say(f"Its the Present list **{x}**")
    
 @client.command(pass_context=True)
-async def del(ctx,ctfname:str):
+async def remove(ctx,ctfname:str):
     if ctfname in x:
         def x[ctfname]
         await client.say("CTF has been deleted successfully")
