@@ -73,6 +73,11 @@ async def help(ctx):
 @client.command(pass_context=True)
 async def total(ctx):
     await client.say(f"Its the Present list **{x}**")
+   
+@client.command(pass_context=True)
+async def reset(ctx):
+    x = {}
+    await client.say("Data has been reset successfully")
     
 client.run("NTM5NDc2MzI4NjIyMzI1ODEy.DzC6Cg.e4h5RCju908JpSU7Hf9JLXpQYH8")
 print(x)    
