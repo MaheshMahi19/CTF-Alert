@@ -10,18 +10,18 @@ async def on_ready():
     print("I am ready for CTF's")
 
 @client.command(pass_context=True)
-async def addctf(ctx,ctfname:str,date:int,month:str,url:str,*,desc):
+async def addctf(ctx,ctfname:str,date:str,url:str,*,desc):
     server = ctx.message.server
     if ctfname in x:
         await client.say("CTF is already in List\n If you want to edit use 'edit command")
         return
-    x[ctfname] = {"url":url,"date":date,"month":month,"desc":desc,"challs":{}}
+    x[ctfname] = {"url":url,"date":date,"desc":desc,"challs":{}}
     await client.say("CTF has been Added")
     print(x)
 @client.command(pass_context=True)
-async def editctf(ctx,ctfname:str,date:int,month:int,url:str,*,ndesc:str):
+async def editctf(ctx,ctfname:str,date:str,url:str,*,ndesc:str):
     if ctfname in x:
-        x[ctfname] = {"url":url,"date":date,"month":month,"desc":ndesc}
+        x[ctfname] = {"url":url,"date":date,"desc":ndesc}
         await client.say("CTF has been Updated")
         print(x)
     else:
