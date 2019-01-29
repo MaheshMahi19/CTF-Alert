@@ -2,6 +2,8 @@ import json
 import discord
 from discord.ext import commands
 from discord.ext.commands import Bot
+import requests
+import json
 global x
 x = {}
 client = commands.Bot(command_prefix="'")
