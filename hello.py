@@ -33,7 +33,7 @@ async def ctf(ctx,count:int):
         y = list(y)
         xc = x[y[i]]
         em = discord.Embed(title=f"A short info About {y[i]}",colour=discord.Colour.red())
-        em.add_field(name="Date and month of CTF challenge",value="%s/%s/2019"%(xc["date"],xc["month"]))
+        em.add_field(name="Date and month of CTF challenge",value="%s  2019"%(xc["date"]))
         em.add_field(name="Link for the CTF",value=f"[{y[i].upper()}](https://{xc['url']})")
         em.add_field(name="Description",value="%s"%(xc["desc"]))
         await client.say(embed=em)
